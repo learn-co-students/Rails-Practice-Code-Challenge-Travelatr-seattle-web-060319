@@ -1,0 +1,9 @@
+<h1>The most recent 5 posts:</h1> 
+<% @destination.most_recent_posts.each do |post|%>
+<h4><%= post.title %></h4>
+<% end %>
+<br>
+<h3><%= link_to "Most Liked Post:", post_path(@destination.most_liked_post)%></h3>
+<br>
+<h3>Average Age:</h3>
+<%= @destination.average_age %>

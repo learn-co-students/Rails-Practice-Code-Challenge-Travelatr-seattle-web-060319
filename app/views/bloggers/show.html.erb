@@ -1,0 +1,9 @@
+Name: <%= @blogger.name %>
+Age: <%= @blogger.age %>
+Bio: <%= @blogger.bio %>
+Title Likes: <%= @blogger.total_likes %><br>
+<%# <%= link_to 'Most Likes Posts:', post_path(@blogger.most_likes_post) %><br>
+Top 5 Most Written:<br>
+<% @blogger.top_5_most.each do |destination|%>
+<%=  destination.name %><br>
+<% end %>
