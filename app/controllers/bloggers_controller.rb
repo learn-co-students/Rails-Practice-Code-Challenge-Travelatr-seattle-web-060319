@@ -11,6 +11,7 @@ class BloggersController < ApplicationController
     if @blogger.save
       redirect_to blogger_path(@blogger)
     else
+      flash[:error_message] = "Please enter a better answer"
       render :new
     end
   end

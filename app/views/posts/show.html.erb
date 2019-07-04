@@ -3,4 +3,4 @@
 <h3>Likes: <%= @post.likes %></h3>
  <%= link_to @post.blogger.name, blogger_path(@post.blogger) %>
  <%= link_to @post.destination.name, destination_path(@post.destination) %>
-<%= link_to 'like', post_like_path(@post), method: :patch %>s
+<%= link_to 'like', post_like_path(@post), method: :patch %>

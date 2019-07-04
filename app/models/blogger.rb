@@ -3,7 +3,7 @@ class Blogger < ApplicationRecord
   has_many :destinations, through: :posts
   validates :name, uniqueness: true
   validates :bio, length: {minimum: 30}
-  validates :age, numericality: { other_than: 0 }
+  validates :age, numericality: { greater_than: 0 }
 
   def total_likes
     self.posts.map{|post| post.likes }.sum
