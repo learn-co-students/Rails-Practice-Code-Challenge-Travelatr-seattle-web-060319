@@ -1,0 +1,12 @@
+<h1><%=@blogger.name%></h1>
+
+<h4>Total Likes: <%= @blogger.total_likes %></h4>
+
+<h4>Featured Post: <BR><%= link_to @blogger.featured_post.title, @blogger.featured_post %> (<%=@blogger.featured_post.likes%> likes)</h4>
+
+<h4>This Blogger's Top 5 Destinations</h4>
+<ol>
+<% @blogger.five_destinations.each do |destination| %>
+<li><%= destination.name %>, <%= destination.country %></li>
+<% end %>
+</ol>
