@@ -1,0 +1,9 @@
+<h1>Posts#show</h1>
+<p> <%= @post.title %><br>
+  <%= @post.content %><br>
+  <%= link_to @post.blogger_name, blogger_path(@post.blogger) %><br>
+  <%= link_to @post.destination_name, destination_path(@post.destination) %><br>
+  <label>Likes:</label>
+  <%= @post.likes %><br>
+  <%= button_to 'Like', button_path, method: :get %>
+</p>

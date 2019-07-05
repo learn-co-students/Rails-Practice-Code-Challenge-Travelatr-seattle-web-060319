@@ -1,0 +1,16 @@
+<h1>Posts#edit</h1>
+<%= form_for @post do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :content %>
+<%= f.text_field :content %>
+<%= f.label :likes %>
+<%= f.text_field :likes %>
+<%= f.label "Blogger:" %>
+<%= f.collection_select :blogger, @bloggers, :id, :name, :include_blank => true %>
+
+<%= f.label "Destination:" %>
+<%= f.collection_select :destination, @destinations, :id, :name, :include_blank => true %>
+
+<%= f.submit %>
+<% end %>

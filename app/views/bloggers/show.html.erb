@@ -1,0 +1,25 @@
+<h1>Bloggers#show</h1>
+<p><label>Name:</label>
+  <%= @blogger.name %><br>
+  <br>
+  <label>Bio:</label>
+  <%= @blogger.bio %><br>
+  <br>
+  <label>Age:</label>
+  <%= @blogger.age %><br>
+  <label>Likes:</label>
+  <%= @blogger.total_likes %><br>
+  <label>Featured Post:</label><br>
+  <%= link_to @blogger.featured_post.title, post_path(@blogger.featured_post) %><br>
+  <br>
+  <br>
+  <label>Top 5:</label>
+  <ul><% @blogger.top_five.each do |tf| %>
+    <li>
+      <%= tf %>
+      </li>
+      <% end %>
+  </ul>
+    <br>
+
+</p>
