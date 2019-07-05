@@ -1,0 +1,7 @@
+<h1>Create a New Post</h1>
+<% if flash[:message] %>
+    <div class="error" style="color:red"> 
+        <%= flash[:message] %>
+    </div>
+<% end %>
+<%= render 'form'%>

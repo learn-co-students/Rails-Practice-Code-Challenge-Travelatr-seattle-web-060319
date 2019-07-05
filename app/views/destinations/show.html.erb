@@ -1,0 +1,23 @@
+<h1><%=@destination.name%>, <%=@destination.country%></h1>
+
+<h4>The most recent 5 posts</h4>
+<ol>
+<% @destination.recent_five.each do |post| %>
+<li><%= link_to post.title, post %></li>
+<% end %>
+</ol>
+
+<h4>Featured Post</h4>
+<% if @destination.most_liked != nil %>
+    <%= link_to @destination.most_liked.title, @destination.most_liked %>
+<% else %>
+    This destination has no posts yet!
+<% end %>
+
+<h4>Average Age of Bloggers that write about this destination: 
+<% if @destination.most_liked != nil %>
+    <%= @destination.avg_age %>
+<% else %>
+    No data
+<% end %>
+</h4>
